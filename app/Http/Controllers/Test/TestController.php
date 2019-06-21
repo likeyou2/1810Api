@@ -6,6 +6,7 @@ use App\Model\TestModel;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redis;
 
 class TestController extends Controller
 {
@@ -280,5 +281,13 @@ class TestController extends Controller
 
         header('refresh:2;url='.$url);
 
+
+    }
+
+    public function test1(){
+        return view('test.test1');
+    }
+    public function test2(){
+        return view('test.test2');
     }
 }
